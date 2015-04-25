@@ -1253,7 +1253,7 @@ table.radio tr.highlight:hover td {
 	font-size: 16px;
 	float: left;
 	line-height: 29px;
-	height: 31px;
+	height: 33px;
 	width: 109px;
 	border: 1px solid #E8AA2F;
 	border-right: none;
@@ -2966,3 +2966,37 @@ a.color:hover {
 	margin-bottom: 7px;
 }
 
+.box-product .name .category_name {
+		 font-size: 13px !important;
+    	line-height: 33px !important;
+	}
+
+.list_grid_right .button_to .button{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #e8aa2f -moz-use-text-color #e8aa2f #e8aa2f;
+    border-image: none;
+    border-radius: 0 0 10px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #8a5c00;
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px !important;
+    line-height: 31px;
+    padding: 0;
+    text-shadow: 0 1px 0 #ffffff;
+    width: 109px !important;
+    background: -moz-linear-gradient(center top , #fdeec3, #f9ca6b) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+	cursor: pointer;
+    font-family: "Source Sans Pro",Arial;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+}
+.product-grid .box-product img {
+	width: 220px !important;
+}
