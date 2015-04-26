@@ -1,294 +1,74 @@
-<%# @product.avatar %>
-<%# image_tag @product.avatar.url %>
-<style > 
-	.product_single_preview{
-		width: auto;
-	}
-</style>
-			<div class="page_content_offset">
-				<div class="container">
-					<div class="row clearfix">
-						<!--left content column-->
-						<section class="col-lg-12 col-md-12 col-sm-12 m_xs_bottom_30">
-							<div class="clearfix m_bottom_30 t_xs_align_c">
-						<div class="photoframe type_2 shadow r_corners f_left f_sm_none d_xs_inline_b product_single_preview relative m_right_30 m_bottom_5 m_sm_bottom_20 m_xs_right_0 w_mxs_full">
-							<div class="relative d_inline_b m_bottom_10 qv_preview d_xs_block">
-								<!-- <img id="zoom_image" src="/images/quick_view_img_7.jpg" data-zoom-image="images/preview_zoom_1.jpg" class="tr_all_hover" alt=""> -->
-								<%= image_tag @product.avatar.url(:medium), id: "zoom_image", class: "tr_all_hover" %>
-								<!-- <a href="/images/preview_zoom_1.jpg" class="d_block button_type_5 r_corners tr_all_hover box_s_none color_light p_hr_0">
-									<i class="fa fa-expand"></i>
-								</a>
-								-->
-							</div>
-							<!--carousel-->
-		
-						</div>
-						<div class="p_top_10 t_xs_align_l">
-							<!--description-->
-							<h2 class="color_dark fw_medium m_bottom_10"><%= @product.name %></h2>
-							
-							<hr class="m_bottom_10 divider_type_3">
-							<table class="description_table m_bottom_10">
-								<tr>
-									<td>Наличие:</td>
-									<td><span class="color_green">в наличии</span></td>
-								</tr>
-								<tr>
-									<td>Артикул:</td>
-									<td><%= @product.sku %></td>
-								</tr>
-							</table>
-							<h5 class="fw_medium m_bottom_10">Краткие характеристики</h5>
-							<table class="description_table m_bottom_5">
-								<tr>
-									<td>Двигатель</td>
-									<td><span class="color_dark">3,2 л.</span></td>
-								</tr>
-								<tr>
-									<td>Тип кузова:</td>
-									<td>Седан</td>
-								</tr>
-								<tr>
-									<td>Год:</td>
-									<td>2014</td>
-								</tr>
+<%= render '/product_categories/blocks/sidebar/sidebar' %>
 
-							</table>
-							<hr class="divider_type_3 m_bottom_15">
-							<div class="m_bottom_15">
-								<span class="v_align_b f_size_big m_left_5 scheme_color fw_medium"><%= @product.price %> р. </span>
-								<button class="button_type_12 r_corners bg_scheme_color color_light tr_delay_hover d_inline_b f_size_large">Купить</button>
-							</div>
-			
-						</div>
-					</div>
-					<!--tabs-->
-					<div class="tabs m_bottom_45">
-						<!--tabs navigation-->
-						<nav>
-							<ul class="tabs_nav horizontal_list clearfix">
-								<li class="f_xs_none"><a href="#tab-1" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">
-									Описание
-								</a></li>
-								<li class="f_xs_none"><a href="#tab-2" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">Характеристики</a></li>
-								<li class="f_xs_none"><a href="#tab-3" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">Отзывы</a></li>
-								<li class="f_xs_none"><a href="#tab-4" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">Видеообзор</a></li>
-							</ul>
-						</nav>
-						<section class="tabs_content shadow r_corners">
-							<div id="tab-1">
-								<p>Здесь описание товара</p>
-							</div>
-							<div id="tab-2">
-								<h5 class="fw_medium m_bottom_15">Характеристики товара:</h5>
-								<div class="row clearfix">
-									<div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_15">
-										<div class="table_sm_wrap">
-											<table class="description_table type_3 m_xs_bottom_10">
-												<tr>
-													<td>Производитель:</td>
-													<td>BMW</td>
-												</tr>
-												<tr>
-													<td>Страна:</td>
-													<td>Германия</td>
-												</tr>
-												<tr>
-													<td>Кузов:</td>
-													<td>Седан</td>
-												</tr>
-												<tr>
-													<td>КПП:</td>
-													<td>Ручная</td>
-												</tr>
-												<tr>
-													<td>Мощность</td>
-													<td>600 лс.</td>
-												</tr>
-												<tr>
-													<td>Расход топлива:</td>
-													<td>10л / 100км</td>
-												</tr>
-											</table>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6 col-sm-6">
-										<div class="table_sm_wrap">
-											<table class="description_table type_3 m_xs_bottom_10">
-												<tr>
-													<td>Производитель:</td>
-													<td>BMW</td>
-												</tr>
-												<tr>
-													<td>Страна:</td>
-													<td>Германия</td>
-												</tr>
-												<tr>
-													<td>Кузов:</td>
-													<td>Седан</td>
-												</tr>
-												<tr>
-													<td>КПП:</td>
-													<td>Ручная</td>
-												</tr>
-												<tr>
-													<td>Мощность</td>
-													<td>600 лс.</td>
-												</tr>
-												<tr>
-													<td>Расход топлива:</td>
-													<td>10л / 100км</td>
-												</tr>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div id="tab-3">
-								<div class="row clearfix">
-									<div class="col-lg-8 col-md-8 col-sm-8">
-										<h5 class="fw_medium m_bottom_15">Последние отзывы</h5>
-										<!--review-->
-										<article>
-											<div class="clearfix m_bottom_10">
-												<p class="f_size_medium f_left f_mxs_none m_mxs_bottom_5">Андрей</p>
-												<!--rating-->
-												<ul class="horizontal_list f_right f_mxs_none clearfix rating_list type_2">
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li>
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-												</ul>	
-											</div>
-											<p class="m_bottom_15">Отличный автомобиль, полностью доволен, всем рекомендую.</p>
-										</article>
-										<hr class="m_bottom_15">
-										<!--review-->
-										<article>
-											<div class="clearfix m_bottom_10">
-												<p class="f_size_medium f_left f_mxs_none m_mxs_bottom_5">Андрей</p>
-												<!--rating-->
-												<ul class="horizontal_list f_right f_mxs_none clearfix rating_list type_2">
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li>
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-												</ul>	
-											</div>
-											<p class="m_bottom_15">Отличный автомобиль, полностью доволен, всем рекомендую.</p>
-										</article>
-										<hr class="m_bottom_15">
-										<!--review-->
-										<article>
-											<div class="clearfix m_bottom_10">
-												<p class="f_size_medium f_left f_mxs_none m_mxs_bottom_5">Андрей</p>
-												<!--rating-->
-												<ul class="horizontal_list f_right f_mxs_none clearfix rating_list type_2">
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li class="active">
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-													<li>
-														<i class="fa fa-star-o empty tr_all_hover"></i>
-														<i class="fa fa-star active tr_all_hover"></i>
-													</li>
-												</ul>	
-											</div>
-											<p class="m_bottom_15">Отличный автомобиль, полностью доволен, всем рекомендую.</p>
-										</article>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-4">
-										<h5 class="fw_medium m_bottom_15">Оставить отзыв</h5>
-										<p class="f_size_medium m_bottom_15">Вы можете оставить свое мнение о товаре.</p>
-										<form>
-											<textarea class="r_corners full_width m_bottom_10 review_tarea"></textarea>
-											<p class="f_size_medium m_bottom_5">Оцените качество продукта.</p>
-											<div class="d_block full_width m_bottom_10">
-												<div class="d_block m_bottom_5 v_align_m">
-													<p class="f_size_medium d_inline_middle m_right_5">Оценка:</p>
-													<!--rating-->
-													<ul class="horizontal_list clearfix rating_list type_2 d_inline_middle">
-														<li class="active">
-															<i class="fa fa-star-o empty tr_all_hover"></i>
-															<i class="fa fa-star active tr_all_hover"></i>
-														</li>
-														<li class="active">
-															<i class="fa fa-star-o empty tr_all_hover"></i>
-															<i class="fa fa-star active tr_all_hover"></i>
-														</li>
-														<li class="active">
-															<i class="fa fa-star-o empty tr_all_hover"></i>
-															<i class="fa fa-star active tr_all_hover"></i>
-														</li>
-														<li class="active">
-															<i class="fa fa-star-o empty tr_all_hover"></i>
-															<i class="fa fa-star active tr_all_hover"></i>
-														</li>
-														<li>
-															<i class="fa fa-star-o empty tr_all_hover"></i>
-															<i class="fa fa-star active tr_all_hover"></i>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<button type="submit" class="r_corners button_type_4 tr_all_hover mw_0 color_dark bg_light_color_2">Отправить</button>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div id="tab-4">
-								<div class="iframe_video_wrap">
-									<iframe src="https://www.youtube.com/embed/ZZwxq4syzAA"></iframe>
-								</div>
-							</div>
-						</section>
-					</div>
-							
-						</section>
-					</div>
-				</div>
-			</div>
+<div id="content">
+    <div class="breadcrumb"></div>
+    <h1><span class="h1-top">Brown Shoes for Boys</span></h1>
+    <div class="product-info">
+      <div class="left">
+        <div class="image">
+          <a href="image/ex/p1-big.jpg" title="" class="cloud-zoom" id='zoom1' rel="adjustX: 0, adjustY:0"><img src="image/ex/p1-big.jpg" title="" alt="" id="image" /></a>
+      <div class="zoom"><a id="zoomer" class="colorbox" href="image/ex/p1-big.jpg">+ Zoom</a></div>
+        </div>
+        <div class="image-additional">
+         <div id="carousel-p">
+        <ul class="jcarousel-skin-tfc">
+        <li>
+        <a href="image/ex/p1-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p1-big.jpg' "><img src="image/ex/p1-small.jpg" title="" alt="" /></a>
+        </li>
+         <li>
+        <a href="image/ex/p2-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p2-big.jpg' "><img src="image/ex/p2-small.jpg" title="" alt="" /></a>
+        </li>
+         <li>
+        <a href="image/ex/p3-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p3-big.jpg' "><img src="image/ex/p3-small.jpg" title="" alt="" /></a>
+        </li>
+         <li>
+        <a href="image/ex/p4-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p4-big.jpg' "><img src="image/ex/p4-small.jpg" title="" alt="" /></a>
+        </li>
+        </ul>
+        </div>
+        </div>
+      
+      </div>
+      <div class="right">
+        <div class="description">
+          <div class="price"> <span id="line_s"></span>
+            <p class="wrap_price"><span class="price-old">$119.50</span> <span class="price-new">$60.75</span></p>
+            <p><span class="price-tax">Ex Tax: $50.00</span></p>
+          </div>
+        </div>
+        <div class="desc2"> <span>Brand:</span> <a href="brands.html">SuperDuper</a><br>
+          <span>Product Code:</span> 00123<br>
+          <span>Availability:</span> In Stock </div>
+        <div class="cart">
+          <div>Qty:
+            <input type="text" name="quantity" size="2" value="1">
+            &nbsp;
+            <input type="button" value="Add to Cart" id="button-cart" class="button">
+            <span>&nbsp;&nbsp;- OR -&nbsp;&nbsp;</span> <span class="links"><a>Add to Wish List</a><br>
+            <a>Add to Compare</a></span> </div>
+        </div>
+        <div class="review">
+          <div><img src="image/stars-4.png" alt="0 reviews"></div>
+          <div><a>6 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a>Write a review</a></div>
+          <div class="share"><img src="image/share2.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    <div id="tabs" class="htabs"><a href="#tab-description">Description</a><a href="#tab-specification">Specifications</a><a href="#tab-review">Reviews (6)</a> </div>
+    <div id="tab-description" class="tab-content">
+      <div class="cpt_product_description ">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+    <div id="tab-specification" class="tab-content">
+      <div class="cpt_product_description ">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+    <div id="tab-review" class="tab-content">
+     <div id="review"><div class="review-list">
