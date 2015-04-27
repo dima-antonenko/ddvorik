@@ -40,6 +40,9 @@ Rails.application.routes.draw do
     resources :post_categories
     resources :posts
     resources :site_variables
+
+    resources :menus
+    resources :menu_items
   end
 
   #devise_for :users

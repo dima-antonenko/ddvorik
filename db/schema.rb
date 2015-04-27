@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415030622) do
+ActiveRecord::Schema.define(version: 20150427192822) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +30,29 @@ ActiveRecord::Schema.define(version: 20150415030622) do
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id"
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
+
+  create_table "menu_items", force: :cascade do |t|
+    t.integer  "menu_id"
+    t.integer  "menu_item_id"
+    t.string   "title"
+    t.string   "link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "position"
+  end
+
+  add_index "menu_items", ["link"], name: "index_menu_items_on_link"
+  add_index "menu_items", ["menu_id"], name: "index_menu_items_on_menu_id"
+  add_index "menu_items", ["menu_item_id"], name: "index_menu_items_on_menu_item_id"
+  add_index "menu_items", ["title"], name: "index_menu_items_on_title"
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "menus", ["title"], name: "index_menus_on_title"
 
   create_table "orders", force: :cascade do |t|
     t.string   "name"
@@ -150,6 +173,30 @@ ActiveRecord::Schema.define(version: 20150415030622) do
   end
 
   add_index "site_variables", ["name"], name: "index_site_variables_on_name"
+
+  create_table "sliders", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sliders", ["title"], name: "index_sliders_on_title"
+
+  create_table "slides", force: :cascade do |t|
+    t.integer  "slider_id"
+    t.string   "title"
+    t.string   "content"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "slides", ["content"], name: "index_slides_on_content"
+  add_index "slides", ["slider_id"], name: "index_slides_on_slider_id"
+  add_index "slides", ["title"], name: "index_slides_on_title"
 
   create_table "static_pages", force: :cascade do |t|
     t.string   "title"
