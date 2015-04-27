@@ -2,17 +2,17 @@ class Administrator::ProductCategoriesController < AdministratorController
   
    before_action :set_product_category, only: [:show, :edit, :update, :destroy]
 
-	def index
-		@product_categories = ProductCategory.all
-		render 'administrator/product_categories/index'
-	end
+  def index
+    @product_categories = ProductCategory.all
+    render 'administrator/product_categories/index'
+  end
 
-	def edit
-		@product_category = ProductCategory.find(params[:id])
-		render 'administrator/product_categories/edit'
-  	end
+  def edit
+    @product_category = ProductCategory.find(params[:id])
+    render 'administrator/product_categories/edit'
+    end
 
-  	def new
+    def new
     @product_category = ProductCategory.new
     
     end
