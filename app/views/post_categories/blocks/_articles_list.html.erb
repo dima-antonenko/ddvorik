@@ -5,7 +5,7 @@
     <% @post_category.posts.each do |post| %>  
       <div class="post_item">
         <h2><%= link_to post.title, post_category_post_path(@post_category, post) %></h2>
-        <div class="imageborder"><a href="blog-details.html">
+        <div class="imageborder">
         
         <%= image_tag post.avatar.url(:thumb) %>
         </div>
