@@ -30,7 +30,10 @@
 									 Название
 								</th>
 								<th>
-									 Обновлено
+									 Родитель
+								</th>
+								<th>
+									 
 								</th>
 								
 							</tr>
@@ -41,6 +44,16 @@
 							<tr>
 								<td>
 									 <%= link_to item.title, edit_administrator_menu_item_path(item) %> <!-- -->
+
+								</td>
+								<td>
+									 <% if item.menu_item_id != 1 %>
+									 	<%= item.menu_item.title %>
+									 <% else  %>
+									 	Корневой пункт меню
+									 <% end %>
+
+									 
 
 								</td>
 								<td>

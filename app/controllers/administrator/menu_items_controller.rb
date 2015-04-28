@@ -9,6 +9,7 @@ class Administrator::MenuItemsController < AdministratorController
 
   def edit
     @menu_item = MenuItem.find(params[:id])
+    @menus = Menu.all
     
   end
 
