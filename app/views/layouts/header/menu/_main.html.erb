@@ -1,8 +1,15 @@
 <div id="menu">
     <ul>
-      <li class="menu_item down"><a href="/product_categories/1">Каталог</a> </li>
-      <li class="menu_item down"><a href="/product_categories/1/products/23">Товар</a> </li>
-      <li class="menu_item down"><a href="/post_categories/1/">Блог</a> </li>
+      <% @main_menu.menu_items.each do |menu_item| %>
+        <% if menu_item.menu_item_id == 1  %>
+          <li class="menu_item down"><a href="<%= menu_item.link %>"><%= menu_item.title %></a> </li>
+          <% if menu_item.menu_item_id != 1  %>
+            <% if menu_item.menu_items.count > 0 %>
+              <li><a href="category.html">Clothes For Girls</a> </li>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
     </ul>
   </div>
   <div id="mobile-menu">

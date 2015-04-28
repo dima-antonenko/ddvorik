@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :minicart_in_head
+  before_action :minicart_in_head, :menu
 
   #rescue_from ActiveRecord::RecordNotFound, with: :errors_404
   #rescue_from ActiveRecord::NoMethodError, with: :errors_404
@@ -27,9 +27,8 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def errors_404
-    response.should render_template(:file => "#{Rails.root}/public/404.html")
-    logger.debug "error404 called"
+  def menu
+    @main_menu = Menu.find(1)
   end
 
 end
