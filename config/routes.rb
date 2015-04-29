@@ -43,6 +43,9 @@ Rails.application.routes.draw do
 
     resources :menus
     resources :menu_items
+
+    resources :sliders
+    resources :slides
   end
 
   #devise_for :users
