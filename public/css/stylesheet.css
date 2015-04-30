@@ -2997,7 +2997,8 @@ a.color:hover {
     text-decoration: none;
     float: right;
 }
-.product-grid .box-product img {
+
+.box-product img {
 	width: 220px !important;
 }
 
@@ -3037,4 +3038,36 @@ a.color:hover {
 
 .product-info .image-additional{
 	display: none;
+}
+
+
+.box-product .button_to .button{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #e8aa2f -moz-use-text-color #e8aa2f #e8aa2f;
+    border-image: none;
+    border-radius: 0 0 10px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #8a5c00;
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px !important;
+    line-height: 31px;
+    padding: 0;
+    text-shadow: 0 1px 0 #ffffff;
+    width: 109px !important;
+    background: -moz-linear-gradient(center top , #fdeec3, #f9ca6b) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+	cursor: pointer;
+    font-family: "Source Sans Pro",Arial;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+}
+
+.box .box-content .box-product .name a {
+	line-height: 33px;
 }

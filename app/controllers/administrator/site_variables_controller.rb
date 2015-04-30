@@ -37,6 +37,10 @@ class Administrator::SiteVariablesController < AdministratorController
     render 'administrator/settings/main'
   end
 
+  def page_home
+    @site_variables = SiteVariable.where(place: "page_home")
+    render 'administrator/site_variables/page_home'
+  end
 
 
   def edit

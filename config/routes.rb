@@ -60,6 +60,8 @@ Rails.application.routes.draw do
   get '/administrator/page_company_info', to: 'administrator/site_variables#page_company_info'
   get '/administrator/page_delivery_pay', to: 'administrator/site_variables#page_delivery_pay'
 
+  get '/administrator/page_home', to: 'administrator/site_variables#page_home'
+
   get '/administrator/settings', to: 'administrator/site_variables#settings'
 
 

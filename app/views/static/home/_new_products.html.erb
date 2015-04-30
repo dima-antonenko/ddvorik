@@ -3,34 +3,17 @@
       <div>
         <h1 class="title_module"><span>Новые товары</span></h1>
         <div class="box-content">
-          <div class="box-product"> <a class="image" href="product.html" title="View more"> <img src="image/ex/p1-209x179.jpg" alt=""> </a>
-            <h3 class="name"><a href="product.html" title="">Brown jacket for boys and girls</a></h3>
-            <p class="wrap_price"> <span class="price">$236.99</span> </p>
-            <p class="submit">
-              <input type="button" value="Add to Cart" class="button">
-            </p>
-          </div>
-          <div class="box-product"> <a class="image" href="product.html" title="View more"> <img src="image/ex/p2-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-            <h3 class="name"><a href="product.html" title="">Funny toy in green, red and blue</a></h3>
-            <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$60.75</span> </p>
-            <p class="submit">
-              <input type="button" value="Add to Cart" class="button">
-            </p>
-          </div>
-          <div class="box-product"> <a class="image" href="product.html" title="View more"> <img src="image/ex/p3-209x179.jpg" alt=""> </a>
-            <h3 class="name"><a href="product.html" title="">Brown shoes for boys</a></h3>
-            <p class="wrap_price"> <span class="price">$119.50</span> </p>
-            <p class="submit">
-              <input type="button" value="Add to Cart" class="button">
-            </p>
-          </div>
-          <div class="box-product last-item"> <a class="image" href="product.html" title="View more"> <img src="image/ex/p4-209x179.jpg" alt=""> </a>
-            <h3 class="name"><a href="product.html" title="">Locomotive in green, red and blue</a></h3>
-            <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
-            <p class="submit">
-              <input type="button" value="Add to Cart" class="button">
-            </p>
-          </div>
+        <% @products.each do |product| %>
+            
+            <div class="box-product"><%= image_tag product.avatar.url(:thumb) %>
+              <h3 class="name"><%= link_to product.name, product_category_product_path(product.product_category, product) %></h3>
+              <p class="wrap_price"> <span class="price"><%= product.price %> р.</span> </p>
+              <p class="submit">
+                 <%= button_to 'Купить', line_items_path(product_id: product),{ class: "button" }%>
+              </p>
+            </div>
+          
+        <% end %>
         </div>
       </div>
     </div>
