@@ -2,12 +2,20 @@
     <ul>
       <% @main_menu.menu_items.each do |menu_item| %>
         <% if menu_item.menu_item_id == 1  %>
-          <li class="menu_item down"><a href="<%= menu_item.link %>"><%= menu_item.title %></a> </li>
-          <% if menu_item.menu_item_id != 1  %>
-            <% if menu_item.menu_items.count > 0 %>
-              <p>zz</p>
+          <li class="menu_item down"><a href="<%= menu_item.link %>"><%= menu_item.title %></a> 
+            <% if menu_item.menu_items && menu_item.id != 1 %>
+                <div class="sub_menu" style="">
+                  <div class="bubble"></div>
+                  <div class="sub_menu_block" style="width:163px">
+                    <ul>
+                      <% menu_item.menu_items.each do |menu_item| %>
+                          <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a></li>
+                       <% end %>
+                     </ul>
+                  </div>
+                </div>    
             <% end %>
-          <% end %>
+            </li>
         <% end %>
       <% end %>
     </ul>
@@ -15,14 +23,11 @@
   <div id="mobile-menu">
     <div id="mobile-menu-nav">
       <ul>
-        <li><a href="category.html">Clothes For Girls</a> </li>
-        <li><a href="category.html">Clothes For Boys</a> </li>
-        <li><a href="category.html">Toys</a> </li>
-        <li><a href="category.html">Safety</a> </li>
-        <li><a href="category.html">Furniture</a> </li>
-        <li><a href="category.html">Prams</a> </li>
-        <li><a href="category.html">At Home</a> </li>
-        <li><a href="category.html">Child Seats</a> </li>
+      <% @main_menu.menu_items.each do |menu_item| %>
+        <% if  menu_item.menu_item_id == 1 %>
+        <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a> </li>
+        <% end %>
+      <% end %>
       </ul>
     </div>
   </div>
