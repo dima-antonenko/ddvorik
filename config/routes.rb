@@ -46,6 +46,8 @@ Rails.application.routes.draw do
 
     resources :sliders
     resources :slides
+
+    resources :banners
   end
 
   #devise_for :users
