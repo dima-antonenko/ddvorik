@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427192822) do
+ActiveRecord::Schema.define(version: 20150430093131) do
+
+  create_table "banners", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "link"
+  end
+
+  add_index "banners", ["link"], name: "index_banners_on_link"
+  add_index "banners", ["title"], name: "index_banners_on_title"
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
