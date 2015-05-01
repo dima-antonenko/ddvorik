@@ -3098,3 +3098,11 @@ a.color:hover {
 .button_submit{
 	margin-top: 20px;
 }
+
+.cart-total{
+	margin-top: -180px;
+}
+
+#footer{
+ padding-bottom: 50px;
+}
