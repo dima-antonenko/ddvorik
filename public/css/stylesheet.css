@@ -2265,33 +2265,24 @@ ul.box-category > li ul > li > a:hover {
 	background: url(../image/bg_tr_cart.png) no-repeat right center;
 }
 .cart-info thead .name {
-	width: 33%;
+	width: 24%;
 }
 .cart-info thead .model, .cart-info thead .quantity, .cart-info thead .price {
-	width: 12%;
+	width: 20%;
 }
 .cart-info thead .name, .cart-info thead .model, .cart-info thead .quantity {
 	text-align: left;
 }
-.cart-info thead .price, .cart-info thead .total {
+ .cart-info thead .total {
 	text-align: right;
 	padding-right:20px;
 }
-.cart-info tbody td {
-	vertical-align: top;
-	padding: 1.5em 0 1.5em 1.5em;
-	border-top: 1px solid #fada99;
-	border-bottom: 1px solid #fada99;
-	background: #fffbdd;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fffbdd));
-	background: -webkit-linear-gradient(top, #ffffff, #fffbdd);
-	background: -moz-linear-gradient(top, #ffffff, #fffbdd);
-	background: -ms-linear-gradient(top, #ffffff, #fffbdd);
-	background: -o-linear-gradient(top, #ffffff, #fffbdd);
-	background-image: -ms-linear-gradient(top, #ffffff 0%, #fffbdd 100%);
-	overflow: hidden;
-	margin-bottom:10px;
+
+cart-info thead .price {
+	text-align: right;
+	padding-right:20px;
 }
+
 .cart-info tbody .image img {
 	
 }
@@ -2315,9 +2306,15 @@ ul.box-category > li ul > li > a:hover {
 	top: 4px;
 	cursor: pointer;
 }
-.cart-info tbody .price, .cart-info tbody .total {
+.cart-info tbody .price {
 	text-align: right;
-	padding-right:20px;
+	padding-right:120px;
+	padding-bottom:0;
+}
+
+.cart-info tbody .total {
+	text-align: right;
+	padding-right:25px;
 	padding-bottom:0;
 }
 .cart-info tbody .emptyrow {
@@ -3072,4 +3069,32 @@ a.color:hover {
 .box-product .name a
  {
 	line-height: 33px;
+}
+
+.cart-item {
+	max-height: 80px !important;
+}
+
+.cart-info tbody td {
+	vertical-align: top;
+	padding: 20px 20px ;
+	border-top: 1px solid #fada99;
+	border-bottom: 1px solid #fada99;
+	background: #fffbdd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fffbdd));
+	background: -webkit-linear-gradient(top, #ffffff, #fffbdd);
+	background: -moz-linear-gradient(top, #ffffff, #fffbdd);
+	background: -ms-linear-gradient(top, #ffffff, #fffbdd);
+	background: -o-linear-gradient(top, #ffffff, #fffbdd);
+	background-image: -ms-linear-gradient(top, #ffffff 0%, #fffbdd 100%);
+	overflow: hidden;
+	margin-bottom:10px;
+}
+
+.cart-info tbody .total .reload{
+	  margin-top: 12px;
+}
+
+.button_submit{
+	margin-top: 20px;
 }
