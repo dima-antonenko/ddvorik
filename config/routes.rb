@@ -53,6 +53,11 @@ Rails.application.routes.draw do
   #devise_for :users
 
   get '/administrator', to: 'administrator#dashboard'
+  get '/delivery_and_pay', to: 'static#delivery_and_pay'
+  get '/contacts', to: 'static#contacts'
+
+
+
 
   get '/administrator/blocks_in_header', to: 'administrator/site_variables#blocks_in_header'
   get '/administrator/blocks_in_footer', to: 'administrator/site_variables#blocks_in_footer'

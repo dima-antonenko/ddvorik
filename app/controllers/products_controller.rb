@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product_category_menu = Menu.where(place: "catalog_menu").first
   end
 
   

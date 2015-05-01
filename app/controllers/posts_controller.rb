@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @news_menu = Menu.where(place: "news_menu").first
   end
 
   # GET /posts/new
