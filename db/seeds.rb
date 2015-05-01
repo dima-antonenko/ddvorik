@@ -1,5 +1,12 @@
-Product.create!([
-  {product_category_id: 1, name: "Товар 1", description: "<p>Описание товара</p>", image: "", sku: "12343", meta_title: "title", meta_description: "description", meta_keywords: "key", price: "2000.0", avatar_file_name: "product.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 779, avatar_updated_at: "2015-04-25 09:24:09", avatar: nil},
-   {product_category_id: 1, name: "Товар 1", description: "<p>Описание товара</p>", image: "", sku: "12343", meta_title: "title", meta_description: "description", meta_keywords: "key", price: "2000.0", avatar_file_name: "product.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 779, avatar_updated_at: "2015-04-25 09:24:09", avatar: nil},
-    {product_category_id: 1, name: "Товар 1", description: "<p>Описание товара</p>", image: "", sku: "12343", meta_title: "title", meta_description: "description", meta_keywords: "key", price: "2000.0", avatar_file_name: "product.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 779, avatar_updated_at: "2015-04-25 09:24:09", avatar: nil}
+MenuItem.create!([
+  {menu_id: 2, menu_item_id: 1, title: "Ссылка", link: "/", position: 1},
+  {menu_id: 2, menu_item_id: 1, title: "Ссылка", link: "/", position: 2},
+  {menu_id: 2, menu_item_id: 1, title: "Ссылка", link: "/", position: 3},
+  {menu_id: 2, menu_item_id: 1, title: "Ссылка", link: "/", position: 4},
+
+  {menu_id: 3, menu_item_id: 1, title: "Ссылка", link: "/", position: 1},
+  {menu_id: 3, menu_item_id: 1, title: "Ссылка", link: "/", position: 2},
+  {menu_id: 3, menu_item_id: 1, title: "Ссылка", link: "/", position: 3},
+  {menu_id: 3, menu_item_id: 1, title: "Ссылка", link: "/", position: 4}
 ])
+

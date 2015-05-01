@@ -5,11 +5,13 @@ class ProductCategoriesController < ApplicationController
   # GET /product_categories.json
   def index
     @product_categories = ProductCategory.paginate(:page => params[:page], :per_page => 30)
+
   end
 
   # GET /product_categories/1
   # GET /product_categories/1.json
   def show
+    @product_category_menu = Menu.where(place: "catalog_menu").first
   end
 
 
@@ -21,6 +23,7 @@ class ProductCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_category_params
+
       params[:product_category]
     end
 end

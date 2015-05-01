@@ -1,32 +1,14 @@
 <div id="column-left">
     <div class="box">
-      <div class="box-heading">Categories</div>
+      <div class="box-heading">Категории</div>
       <div class="box-content">
         <ul class="box-category">
-          <li> <a href="category.html" class="active">Clothes For Girls (4)</a>
-            <ul>
-              <li><a href="category.html">Retrorsum</a></li>
-              <li><a href="category.html">Suos</a></li>
-              <li><a href="category.html">Eam</a></li>
-              <li><a href="category.html">Famulus</a></li>
-              <li><a href="category.html">Participat</a></li>
-              <li><a href="category.html">Indulgentia</a></li>
-              <li><a href="category.html">Dianae</a></li>
-              <li><a href="category.html">Scitote</a></li>
-              <li><a href="category.html">Nunc</a></li>
-              <li class="last-item"><a href="category.html">Lugens</a></li>
-            </ul>
+        <%  @product_category_menu.menu_items.each do |menu_item| %>
+          <li> 
+          <a href="<%= menu_item.link %>"><%= menu_item.title %></a> 
           </li>
-          <li> <a href="category.html">Clothes For Boys (0)</a> </li>
-          <li> <a href="category.html">Toys (12)</a>
-          </li>
-          <li> <a href="category.html">Safety (5)</a>
-          </li>
-          <li> <a href="category.html">Furniture (2)</a>
-          </li>
-          <li> <a href="category.html">Prams (3)</a> </li>
-          <li> <a href="category.html">At Home (2)</a> </li>
-          <li class="last-item"> <a href="category.html">Child Seats (0)</a> </li>
+
+         <% end %>
         </ul>
       </div>
     </div>

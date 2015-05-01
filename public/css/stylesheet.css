@@ -3068,6 +3068,8 @@ a.color:hover {
     float: right;
 }
 
-.box .box-content .box-product .name a {
+.box .box-content .box-product .name a, 
+.box-product .name a
+ {
 	line-height: 33px;
 }

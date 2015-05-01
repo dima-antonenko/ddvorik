@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
 
 
   def menu
-    @main_menu = Menu.find(1)
+    @main_menu = Menu.where(place: "main_menu").first
   end
 
 end

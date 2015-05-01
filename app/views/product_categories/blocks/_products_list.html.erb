@@ -1,22 +1,40 @@
    <div class="product-grid">
-
+<% @i = 0 %>
 <% @product_category.products.each do |product| %>
 
-      <div class="box-product">
-    
-      <%= image_tag product.avatar.url(:thumb) %>
-        <div class="list_grid_right">
-          <h3 class="name"><%= link_to product.name, product_category_product_path(@product_category, product) %></h3>
-          <p class="wrap_price"> <span class="price"><%= product.price %> р.</span></p>
-          <p class="submit">
-            <!-- <input type="button" value="Add to Cart" class="button"> -->
-            <%= button_to 'Купить', line_items_path(product_id: product),{ class: "button" }%>
-          </p>
-        </div>
-      </div>
-      <% end %>
+<% if @i == 3  %>
 
-    </div>
+<div class="box-product last-item row-first">
+        
+          <%= image_tag product.avatar.url(:thumb) %>
+            <div class="list_grid_right">
+              <h3 class="name"><%= link_to product.name, product_category_product_path(@product_category, product) %></h3>
+              <p class="wrap_price"> <span class="price"><%= product.price %> р.</span></p>
+              <p class="submit">
+                <!-- <input type="button" value="Add to Cart" class="button"> -->
+                <%= button_to 'Купить', line_items_path(product_id: product),{ class: "button" }%>
+              </p>
+            </div>
+</div>
+<% @i = 0 %>
+<% else %>
 
+<div class="box-product ">
+        
+          <%= image_tag product.avatar.url(:thumb) %>
+            <div class="list_grid_right">
+              <h3 class="name"><%= link_to product.name, product_category_product_path(@product_category, product) %></h3>
+              <p class="wrap_price"> <span class="price"><%= product.price %> р.</span></p>
+              <p class="submit">
+                <!-- <input type="button" value="Add to Cart" class="button"> -->
+                <%= button_to 'Купить', line_items_path(product_id: product),{ class: "button" }%>
+              </p>
+            </div>
+</div>
+<% @i = @i + 1 %>
 
-  </div>
+<% end %>
+
+      <% end %>      
+</div>
+</div>
