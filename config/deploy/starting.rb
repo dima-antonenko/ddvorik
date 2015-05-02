@@ -1,0 +1,1 @@
+after("deploy:update_code", "deploy:move_seed_images_into_place")

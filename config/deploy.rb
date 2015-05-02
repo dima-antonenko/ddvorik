@@ -87,6 +87,11 @@ namespace :deploy do
       # end
     end
   end
+
+  desc "Move seed images into place"
+  task :move_seed_images_into_place, :roles => :app do
+    run "cd #{release_path}; cp -R app/public/system/* #{shared_path}/system"
+  end
  
   after :finishing, 'deploy:cleanup'
 end
