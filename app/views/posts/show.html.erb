@@ -1,3 +1,6 @@
+<% provide(:title, @post.meta_title) %>
+<% provide(:description, @post.meta_description) %>
+<% provide(:keywords, @post.meta_keywords) %>
  <%= render('post_categories/blocks/sidebar') %>
   <div id="content">
     <h1><span class="h1-top"><%= @post.title %></span></h1>

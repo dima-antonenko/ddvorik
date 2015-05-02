@@ -3,14 +3,7 @@ class OrdersController < ApplicationController
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
-  # GET /orders
-  # GET /orders.json
-  def index
-    @orders = Order.all
-  end
-
-  # GET /orders/1
-  # GET /orders/1.json
+  
   def show
   end
 
@@ -26,9 +19,6 @@ class OrdersController < ApplicationController
   
   end
 
-  # GET /orders/1/edit
-  def edit
-  end
 
   # POST /orders
   # POST /orders.json
@@ -36,16 +26,8 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
 
-    @products_in_order = ""
     @total_price = 0
 
-    @order.line_items.each do |item|
-      @total_price += item.product.price
-      @products_in_order << item.product.name
-      @products_in_order << "--"
-      @products_in_order << item.product.sku
-      @products_in_order << ";"
-    end
 
     @order.products = @products_in_order
     @order.total_price = @total_price

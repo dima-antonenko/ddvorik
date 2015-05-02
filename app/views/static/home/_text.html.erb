@@ -2,7 +2,7 @@
       <div>
       
         <div class="box-content">
-         	<%= @text.first.value.html_safe  %>
+         	<%= @text_home.where(name: "Текст на главной странице").first.value.html_safe  %>
         </div>
       </div>
     </div>

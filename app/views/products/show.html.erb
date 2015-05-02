@@ -6,6 +6,9 @@
     margin-bottom: 0;
   }
 </style>
+<% provide(:title, @product.meta_title) %>
+<% provide(:description, @product.meta_description) %>
+<% provide(:keywords, @product.meta_keywords) %>
 <%= render '/product_categories/blocks/sidebar/sidebar' %>
   <div id="content">
     <div class="breadcrumb"></div>

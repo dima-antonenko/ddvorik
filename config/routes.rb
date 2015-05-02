@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
 
   
-  resources :static_pages, only: :show
+  resources :static_pages
 
-  resources :orders
+  resources :orders, only: [:show]
 
   resources :line_items
 
-  resources :carts
+  resources :carts, only: [:show]
 
-  resources :post_categories do
-    resources :posts
+  resources :post_categories, only: [:show] do
+    resources :posts, only: [:show]
   end
 
-  resources :product_categories do
-    resources :products
+  resources :product_categories, only: [:show] do
+    resources :products, only: [:show]
   end
 
   root 'static#home'
