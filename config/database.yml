@@ -24,6 +24,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: laston
-  username: laston
-  password: dimaantonenko94
+  database: dima-ant_ddvor81
+  username: dima-ant_ddvor81
+  password: qazwsx

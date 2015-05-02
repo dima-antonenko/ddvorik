@@ -3,7 +3,7 @@
       <% @main_menu.menu_items.each do |menu_item| %>
         <% if menu_item.menu_item_id == 1  %>
           <li class="menu_item down"><a href="<%= menu_item.link %>"><%= menu_item.title %></a> 
-            <% if menu_item.menu_items && menu_item.id != 1 %>
+            <% if menu_item.menu_items.count > 0 && menu_item.id != 1 %>
                 <div class="sub_menu" style="">
                   <div class="bubble"></div>
                   <div class="sub_menu_block" style="width:163px">

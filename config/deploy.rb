@@ -2,7 +2,7 @@
 lock '3.4.0'
  
 set :application,  'laston'
-set :repo_url,     'https://github.com/dima-antonenko/cms.git'
+set :repo_url,     'https://github.com/dima-antonenko/ddvorik.git'
  
 set :shared_path,  "/home/#{fetch(:user)}/projects/#{fetch(:application)}/shared"
 set :bundle_dir,   File.join(fetch(:shared_path), 'gems')
