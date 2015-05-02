@@ -33,6 +33,9 @@
 									 Родитель
 								</th>
 								<th>
+									 Позиция
+								</th>
+								<th>
 									 
 								</th>
 								
@@ -55,6 +58,9 @@
 
 									 
 
+								</td>
+								<td>
+									<%= item.position %>
 								</td>
 								<td>
 									<%= link_to 'Удалить', administrator_menu_item_path(item), method: :delete, data: { confirm: 'Удалить пункт ?' } %>

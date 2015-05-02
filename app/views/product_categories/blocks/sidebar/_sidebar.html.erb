@@ -3,7 +3,7 @@
       <div class="box-heading"><%= @product_category_menu.title %></div>
       <div class="box-content">
         <ul class="box-category">
-        <%  @product_category_menu.menu_items.each do |menu_item| %>
+        <%  @product_category_menu.menu_items.order(:position).each do |menu_item| %>
           <li> 
           <a href="<%= menu_item.link %>"><%= menu_item.title %></a> 
           </li>

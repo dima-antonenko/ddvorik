@@ -88,7 +88,7 @@ namespace :deploy do
     end
   end
 
-  desc "build missing paperclip styles"
+   desc "build missing paperclip styles"
   task :build_missing_paperclip_styles do
     on roles(:app) do
       within release_path do

@@ -1,6 +1,6 @@
 <div id="menu">
     <ul>
-      <% @main_menu.menu_items.each do |menu_item| %>
+      <% @main_menu.menu_items.order(:position).each do |menu_item| %>
         <% if menu_item.menu_item_id == 1  %>
           <li class="menu_item down"><a href="<%= menu_item.link %>"><%= menu_item.title %></a> 
             <% if menu_item.menu_items.count > 0 && menu_item.id != 1 %>
@@ -23,7 +23,7 @@
   <div id="mobile-menu">
     <div id="mobile-menu-nav">
       <ul>
-      <% @main_menu.menu_items.each do |menu_item| %>
+      <% @main_menu.menu_items.order(:position).each do |menu_item| %>
         <% if  menu_item.menu_item_id == 1 %>
         <li><a href="<%= menu_item.link %>"><%= menu_item.title %></a> </li>
         <% end %>
