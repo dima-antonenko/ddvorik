@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
  
-set :application,  'laston'
+set :application,  'ddvorik'
 set :repo_url,     'https://github.com/dima-antonenko/ddvorik.git'
  
 set :shared_path,  "/home/#{fetch(:user)}/projects/#{fetch(:application)}/shared"
