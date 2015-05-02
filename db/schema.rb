@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430231401) do
+ActiveRecord::Schema.define(version: 20150502191122) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "title"
@@ -24,8 +24,14 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "link"
   end
 
+  add_index "banners", ["avatar_content_type"], name: "index_banners_on_avatar_content_type"
+  add_index "banners", ["avatar_file_name"], name: "index_banners_on_avatar_file_name"
+  add_index "banners", ["avatar_file_size"], name: "index_banners_on_avatar_file_size"
+  add_index "banners", ["avatar_updated_at"], name: "index_banners_on_avatar_updated_at"
+  add_index "banners", ["created_at"], name: "index_banners_on_created_at"
   add_index "banners", ["link"], name: "index_banners_on_link"
   add_index "banners", ["title"], name: "index_banners_on_title"
+  add_index "banners", ["updated_at"], name: "index_banners_on_updated_at"
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -96,7 +102,6 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "avatar"
   end
 
   add_index "post_categories", ["meta_description"], name: "index_post_categories_on_meta_description"
@@ -109,7 +114,6 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "title"
     t.text     "text"
     t.text     "lead"
-    t.string   "image"
     t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
@@ -119,14 +123,13 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "avatar"
   end
 
-  add_index "posts", ["image"], name: "index_posts_on_image"
   add_index "posts", ["lead"], name: "index_posts_on_lead"
   add_index "posts", ["meta_description"], name: "index_posts_on_meta_description"
   add_index "posts", ["meta_keywords"], name: "index_posts_on_meta_keywords"
   add_index "posts", ["meta_title"], name: "index_posts_on_meta_title"
+  add_index "posts", ["post_category_id"], name: "index_posts_on_post_category_id"
   add_index "posts", ["title"], name: "index_posts_on_title"
 
   create_table "product_categories", force: :cascade do |t|
@@ -146,7 +149,6 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "avatar"
   end
 
   add_index "product_categories", ["meta_description"], name: "index_product_categories_on_meta_description"
@@ -158,7 +160,6 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.integer  "product_category_id"
     t.string   "name"
     t.text     "description"
-    t.string   "image"
     t.string   "sku"
     t.string   "meta_title"
     t.string   "meta_description"
@@ -173,12 +174,16 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.string   "avatar"
   end
 
-  add_index "products", ["image"], name: "index_products_on_image"
+  add_index "products", ["avatar_content_type"], name: "index_products_on_avatar_content_type"
+  add_index "products", ["avatar_file_name"], name: "index_products_on_avatar_file_name"
+  add_index "products", ["avatar_file_size"], name: "index_products_on_avatar_file_size"
+  add_index "products", ["avatar_updated_at"], name: "index_products_on_avatar_updated_at"
   add_index "products", ["meta_description"], name: "index_products_on_meta_description"
   add_index "products", ["meta_keywords"], name: "index_products_on_meta_keywords"
   add_index "products", ["meta_title"], name: "index_products_on_meta_title"
   add_index "products", ["name"], name: "index_products_on_name"
   add_index "products", ["price"], name: "index_products_on_price"
+  add_index "products", ["product_category_id"], name: "index_products_on_product_category_id"
 
   create_table "site_variables", force: :cascade do |t|
     t.string   "name"
@@ -189,6 +194,8 @@ ActiveRecord::Schema.define(version: 20150430231401) do
   end
 
   add_index "site_variables", ["name"], name: "index_site_variables_on_name"
+  add_index "site_variables", ["place"], name: "index_site_variables_on_place"
+  add_index "site_variables", ["value"], name: "index_site_variables_on_value"
 
   create_table "sliders", force: :cascade do |t|
     t.string   "title"
@@ -210,6 +217,10 @@ ActiveRecord::Schema.define(version: 20150430231401) do
     t.datetime "avatar_updated_at"
   end
 
+  add_index "slides", ["avatar_content_type"], name: "index_slides_on_avatar_content_type"
+  add_index "slides", ["avatar_file_name"], name: "index_slides_on_avatar_file_name"
+  add_index "slides", ["avatar_file_size"], name: "index_slides_on_avatar_file_size"
+  add_index "slides", ["avatar_updated_at"], name: "index_slides_on_avatar_updated_at"
   add_index "slides", ["content"], name: "index_slides_on_content"
   add_index "slides", ["slider_id"], name: "index_slides_on_slider_id"
   add_index "slides", ["title"], name: "index_slides_on_title"

@@ -48,7 +48,7 @@
 									 <%= link_to post.title, edit_administrator_post_path(post) %> <!-- -->
 								</td>
 								<td>
-									 <%= post.lead  %> <!-- -->
+									 <%= post.lead.to_s[0..100] %>  ...  <!-- -->
 								</td>
 								<td>
 									<%= post.created_at.to_s[2...-4] %>
