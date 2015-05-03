@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:show]
   end
 
-  resources :product_categories, only: [:show] do
+  resources :product_categories, only: [:show, :index] do
     resources :products, only: [:show]
   end
 
