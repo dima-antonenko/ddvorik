@@ -97,7 +97,7 @@ class Administrator::SiteVariablesController < AdministratorController
   private
 
   def site_variable_params
-      params.require(:site_variable).permit(:value)
+      params.require(:site_variable).permit(:value, :name)
   end
 
   def set_site_variable

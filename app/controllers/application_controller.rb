@@ -33,6 +33,7 @@ class ApplicationController < ActionController::Base
 
   def footer
     @footer_content = SiteVariable.where(place: "footer")
+    @metrica = SiteVariable.where(place: "settings")
   end
 
 end

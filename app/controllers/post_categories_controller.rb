@@ -3,6 +3,7 @@ class PostCategoriesController < ApplicationController
 
   def show
     @news_menu = Menu.where(place: "news_menu").first
+    
   end
 
 

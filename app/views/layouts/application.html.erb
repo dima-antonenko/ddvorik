@@ -38,6 +38,11 @@
   <%= yield %>
 
  <%= render '/layouts/footer/footer_main' %>
+ 
+ <%= @metrica.where(name: "Код яндекс метрики").first.value %>
+ <br/>
+ <%= @metrica.where(name: "Код гугл аналитики").first.value %>
+
 
 </body>
 </html>
