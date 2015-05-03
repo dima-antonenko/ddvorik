@@ -8,6 +8,10 @@ class AdministratorController < ApplicationController
 		render "administrator/dashboard"
 	end
 
+	def footer
+		@footer_content = SiteVariable.where(place: "footer")
+	end
+
 	
 end
 

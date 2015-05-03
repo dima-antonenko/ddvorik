@@ -6,7 +6,7 @@
 
 <div class="box-product last-item row-first">
         
-          <%= image_tag product.avatar.url(:thumb) %>
+         <a href="<%= product_category_product_path(@product_category, product) %>"> <%= image_tag product.avatar.url(:thumb) %> </a>
             <div class="list_grid_right">
               <h3 class="name"><%= link_to product.name, product_category_product_path(@product_category, product) %></h3>
               <p class="wrap_price"> <span class="price"><%= product.price %> р.</span></p>
@@ -20,8 +20,9 @@
 <% else %>
 
 <div class="box-product ">
-        
+          <a href="<%= product_category_product_path(@product_category, product) %>">
           <%= image_tag product.avatar.url(:thumb) %>
+          </a>
             <div class="list_grid_right">
               <h3 class="name"><%= link_to product.name, product_category_product_path(@product_category, product) %></h3>
               <p class="wrap_price"> <span class="price"><%= product.price %> р.</span></p>

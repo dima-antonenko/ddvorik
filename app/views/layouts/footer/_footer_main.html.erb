@@ -5,22 +5,19 @@
         <div id="footer_top_item">
           <div class="footer_top_item" id="about_us">
             <h3 class="title_item_1 down"><a href="about.html">О компании</a></h3>
-            <p class="text_item content_item_1 about"> Здесь о компании </p>
+            <p class="text_item content_item_1 about"><%= @footer_content.where(name: "О компании").first.value.html_safe %></p>
           </div>
           <div class="footer_top_item" id="contact_us">
             <h3 class="title_item_2 down"><a href="contact.html">Контакты</a></h3>
             <div class="text_item">
-              <p>Здесь контакты</p>
-              <p class="online_contact">  <span class="phone">012 - 345 67 89</span><span class="mail"><a class="color" href="mailto:contact@thingsforcuties.doe" title="Mail">contact@thingsforcuties.doe</a></span> </p>
+              <p class="online_contact">  <span class="phone"><%= @footer_content.where(name: "Номер телефона").first.value.html_safe %></span><span class="mail"><a class="color" href="#" title="Mail"><%= @footer_content.where(name: "email").first.value.html_safe %></a></span> </p>
             </div>
           </div>
 
           <div class="footer_top_item" id="contact_us">
             <h3 class="title_item_2 down"><a href="contact.html">График работы</a></h3>
             <div class="text_item">
-              <p>пн-пт: 08:00 - 16:00 </p>
-              <p>cб: 10:00 - 15:00 </p>
-              <p>вс: выходной </p>
+              <%= @footer_content.where(name: "график работы").first.value.html_safe %>
             </div>
           </div>
 
@@ -37,6 +34,6 @@
   <div class="footer_wrapper">
   </div>
   <div id="footer-text">
-    <p>Разработал: <a href="http://vk.com/dima_antonenko">Дмитрий Антоненко</a></p>
+    <p class="copyrite">Разработал: <a href="http://vk.com/dima_antonenko">Дмитрий Антоненко</a></p>
   </div>
 </div>

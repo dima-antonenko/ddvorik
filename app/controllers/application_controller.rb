@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :minicart_in_head, :menu
+  before_action :minicart_in_head, :menu, :footer
 
   #rescue_from ActiveRecord::RecordNotFound, with: :errors_404
   #rescue_from ActiveRecord::NoMethodError, with: :errors_404
@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
 
   def menu
     @main_menu = Menu.where(place: "main_menu").first
+  end
+
+  def footer
+    @footer_content = SiteVariable.where(place: "footer")
   end
 
 end

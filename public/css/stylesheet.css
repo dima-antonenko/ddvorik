@@ -2883,6 +2883,7 @@ a.color:hover {
 	text-align: left;
 	line-height: 20px;
 	font-size:12px;
+	 padding-left: 20px;
 }
 #about_us h3 {
 	background: url(../image/icon_1.png) no-repeat left center
@@ -3113,4 +3114,15 @@ a.color:hover {
 
 #header #cart .heading{
 	 width: 195px;
+}
+.title_item_2 .text_item p{
+	padding-left: 40px;
+}
+
+.copyrite, .copyrite a {
+	 color:#1a4a5c !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
