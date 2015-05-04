@@ -151,15 +151,15 @@
    <% if product_category.product_categories.count > 0 %>
 
     <% if product_category.id ==  product_category.product_category.id %>
-      <li><a href="#"><%= product_category.name %></a>
+      <li><a href="<%= product_category_path(product_category) %>"><%= product_category.name %></a>
         <ul class="sub">
           <% product_category.product_categories.each do |product_category| %>
             <% if product_category.id !=  product_category.product_category.id %>
-                    <li><a href="#"><%= product_category.name %></a>
+                    <li><a href="<%= product_category_path(product_category) %>"><%= product_category.name %></a>
                       <ul class="sub">
                         <% product_category.product_categories.each do |product_category| %>
                           <% if product_category.id !=  product_category.product_category.id %>
-                                  <li><a href="#"><%= product_category.name %></a></li>
+                                  <li><a href="<%= product_category_path(product_category) %>"><%= product_category.name %></a></li>
                                 <%  end %>  
                               <% end %>    
                           </ul>
