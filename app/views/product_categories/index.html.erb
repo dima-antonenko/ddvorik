@@ -30,7 +30,9 @@
                             
                              
                                 <div class="list_grid_right">
-                                  <h3 class="name "><a class="category_name" href="<%= product_category_path(category) %>" title=""><%= category.name %></a></h3>
+                                  <h3 class="name "><a class="category_name" href="<%= product_category_path(category) %>" title=""><%= category.name %></a>
+                                     <%= @i %>
+                                  </h3>
                                  
                                   <p class="submit">
                                     <!-- <input type="button" value="Add to Cart" class="button"> -->
@@ -44,7 +46,9 @@
                     <div class="box-product ">
                              
                                 <div class="list_grid_right">
-                                  <h3 class="name"><a class="category_name" href="<%= product_category_path(category) %>" title=""><%= category.name %></a></h3>
+                                  <h3 class="name"><a class="category_name" href="<%= product_category_path(category) %>" title=""><%= category.name %></a>
+                                    <%= @i %>
+                                  </h3>
                                   
                                   <p class="submit">
                                     <!-- <input type="button" value="Add to Cart" class="button"> -->
