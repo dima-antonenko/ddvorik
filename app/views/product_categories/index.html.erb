@@ -19,12 +19,12 @@
     
     
    <div class="product-grid">
-<% @i = 0 %>
+<% @i = -1 %>
 <% @product_categories.each do |category| %>
 
 <% if category.product_category_id == category.id %>
 
-<% if @i == 3  %>
+<% if @i == 2  %>
 
 <div class="box-product last-item row-first">
         
