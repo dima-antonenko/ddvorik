@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resources :static_pages
 
-  resources :orders, only: [:show]
+  resources :orders, except: [:index]
 
   resources :line_items
 
