@@ -1112,7 +1112,7 @@ table.radio tr.highlight:hover td {
 	font-size: 20px;
 	background: url(../image/title_sidebar.png) no-repeat left center;
 	text-align: left;
-	padding-left: 21px;
+	padding-left: 25px;
 	padding-top: 7px;
 	padding-right: 30px;
 	margin-bottom: 0;
@@ -1272,8 +1272,8 @@ table.radio tr.highlight:hover td {
 	border-bottom-left-radius: 0;
 }
 .box-product .price {
-	padding-left: 6px;
-	padding-top:1px;
+	padding-left: 14px;
+	padding-top:3px;
 	color: #b87a00;
 	font-family: Arial;
 	font-size:14px;
