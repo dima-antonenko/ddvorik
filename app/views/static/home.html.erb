@@ -1,8 +1,20 @@
-<% provide(:title, @text_home.where(name: "Title").first.value) %>
+<% provide(:title, strip_tags(@text_home.where(name: "Title").first.value) ) %>
 <% provide(:description, @text_home.where(name: "Description").first.value) %>
 <% provide(:keywords, @text_home.where(name: "Keywords").first.value) %>
 
+<style type="text/css">
+	#column-left{
+		padding-top: 0px;	
+	}
+	#content{
+		margin-bottom: 0px;
+	}
+	h1, .welcome{
+	  margin-top: 0px;
+	}
+</style>
+
 <%= render '/static/home/slider' %>
 <%= render '/static/home/banners' %>
-<%= render '/static/home/new_products' %>
 <%= render '/static/home/text' %>
+<%= render '/static/home/new_products' %>

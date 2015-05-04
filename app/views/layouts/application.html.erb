@@ -17,7 +17,7 @@
 <script type="text/JavaScript" src="/js/cloud-zoom.1.0.2.js"></script>
 <script type="text/JavaScript" src="/js/cuties.js"></script>
 
-<title><%= yield(:title) %></title>
+<title><%= yield(:title)  %></title>
 <meta name="keywords" content="<%= yield(:description) %>">
 <meta name="description" content="<%= yield(:keywords) %>">
 
@@ -39,9 +39,9 @@
 
  <%= render '/layouts/footer/footer_main' %>
  
- <%= @metrica.where(name: "Код яндекс метрики").first.value %>
+ <%= strip_tags @metrica.where(name: "Код яндекс метрики").first.value %>
  <br/>
- <%= @metrica.where(name: "Код гугл аналитики").first.value %>
+ <%= strip_tags @metrica.where(name: "Код гугл аналитики").first.value %>
 
 
 </body>

@@ -484,7 +484,7 @@ a.button:hover, input.button:hover, input.hover {
 #column-left {
 	float: left;
 	width: 220px;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 #column-right {
 	float:right;
