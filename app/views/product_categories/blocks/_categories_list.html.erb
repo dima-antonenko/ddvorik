@@ -1,8 +1,7 @@
-
+ <% @i = -1 %>
 
  <% if @product_category.product_categories.count > 0 %>
  <div class="product-grid">
-  <% @i = -1 %>
    	  <% @product_category.product_categories.each do |category| %>
    	  	<% if category.id !=  @product_category.id %>
    	  		<% if @i == 2  %>
