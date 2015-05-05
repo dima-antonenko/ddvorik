@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  mount Ckeditor::Engine => '/ckeditor'
   resources :static_pages
 
   resources :orders, except: [:index]
