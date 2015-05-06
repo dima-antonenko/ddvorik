@@ -28,9 +28,15 @@ class OrdersController < ApplicationController
 
     @total_price = 0
 
+    @order.line_items.each do |item|
+      @total_price += item.product.price
+      
+    end
 
     @order.products = @products_in_order
     @order.total_price = @total_price
+
+
 
     respond_to do |format|
       if @order.save

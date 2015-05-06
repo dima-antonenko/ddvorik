@@ -3,18 +3,6 @@
 		padding-bottom: 50px;
 	}
 </style>
-<script>
-  $(function() {
-    $('textarea#edit').editable({
-      inlineMode: false
-    })
-  });
-</script>
-
-<head><!-- CDN hosted by Cachefly -->
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>tinymce.init({selector:'textarea.edit'});</script>
-</head>
 
 <div class="page-content-wrapper">
 		<div class="page-content">
@@ -76,7 +64,7 @@
 													<label class="col-md-2 control-label">Описание: </span>
 													</label>
 													<div class="col-md-10">
-														 <%= f.text_area :description, id: "edit", class: "form-control edit" %>
+														 <%= f.cktext_area :description,  class: "form-control edit" %>
 													</div>
 												</div>
 											</div>
