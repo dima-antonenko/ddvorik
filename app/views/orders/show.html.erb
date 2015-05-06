@@ -32,10 +32,10 @@
               <td class="model"><%= item.product.sku %></td>
               <td class="name"><%= item.product.name %>
               </td>
-              <td class="price"><%= item.product.price %> р.</td>
+              <td class="price"><%= number_to_currency(item.product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></td>
               <td class="quantity"><%= item.quantity %></td>
               <td class="total">
-                <%= item.product.price * item.quantity %>
+                 <%= number_to_currency(item.product.price * item.quantity, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %>
             </tr>
             <tr>
               <td colspan="6" class="emptyrow"></td>
@@ -48,8 +48,8 @@
 
     </form>
     <tr>
-    <span class="right lastrow mini_head"><b>Всего:</b></span>
-    <span class="right last lastrow mini_content"><%= @order.total_price %> р.</span>
+    <span class="right lastrow mini_head"><b>Всего:</b></span>  
+    <span class="right last lastrow mini_content"><%= number_to_currency(@order.total_price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span>
     </tr>
     <br/>
     <tr>

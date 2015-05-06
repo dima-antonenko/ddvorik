@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :line_items
 
-  resources :carts, only: [:show]
+  resources :carts
 
   resources :post_categories, only: [:show] do
     resources :posts, only: [:show]

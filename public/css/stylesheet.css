@@ -642,7 +642,7 @@ a.button:hover, input.button:hover, input.hover {
 #header #cart .heading .cart_top_in {
 	float: left;
 	width: 100%;
-	background: url(../image/cart.png) no-repeat 162px top;
+	background: url(../image/cart.png) no-repeat 182px top;
 	line-height: 29px;
 	font-size: 1em;
 	cursor:pointer;
@@ -664,8 +664,8 @@ a.button:hover, input.button:hover, input.hover {
 	text-decoration: none;
 }
 #header #cart .heading a span {
-	float: right;
-	padding-right: 40px;
+	float: left;
+	 padding-left: 7px;
 	color: #474D00;
 	font-size: 14px;
 	font-family: Arial;
@@ -1276,7 +1276,7 @@ table.radio tr.highlight:hover td {
 	padding-top:3px;
 	color: #b87a00;
 	font-family: Arial;
-	font-size:14px;
+	font-size:13px;
 	font-weight: 600;
 	float: left;
 }
@@ -3027,7 +3027,7 @@ a.color:hover {
 }
 
 .product-info .price {
-	padding-left: 64px;
+	padding-left: 47px;
 }
 
 .product-info .image-additional{
@@ -3097,7 +3097,7 @@ a.color:hover {
 }
 
 .cart-total{
-	margin-top: -180px;
+	margin-top: -10px;
 }
 
 #footer{
@@ -3113,7 +3113,7 @@ a.color:hover {
 }
 
 #header #cart .heading{
-	 width: 195px;
+	 width: 220px;
 }
 .title_item_2 .text_item p{
 	padding-left: 40px;

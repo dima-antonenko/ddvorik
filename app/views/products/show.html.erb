@@ -44,7 +44,7 @@
       <div class="right">
         <div class="description">
           <div class="price"> <span id="line_s"></span>
-            <p class="wrap_price"> <span class="price-new"><%= @product.price %> р.</span></p>
+            <p class="wrap_price"> <span class="price-new"><%= number_to_currency(@product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span></p>
           </div>
         </div>
         <div class="desc2"> 
