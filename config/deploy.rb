@@ -101,10 +101,6 @@ namespace :deploy do
     end
   end
 
-  after :finishing, 'deploy:cleanup'
-  
-  require 'fileutils'
-
 desc "Create nondigest versions of all ckeditor digest assets"
 task "assets:precompile" do
   fingerprint = /\-[0-9a-f]{32}\./
@@ -114,6 +110,12 @@ task "assets:precompile" do
     FileUtils.cp file, nondigest, verbose: true
   end
 end
+
+  
+
+  after :finishing, 'deploy:cleanup'
+  
+
 
 end
 
