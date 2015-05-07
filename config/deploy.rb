@@ -90,32 +90,10 @@ namespace :deploy do
     end
   end
 
-   desc "build missing paperclip styles"
-  task :build_missing_paperclip_styles do
-    on roles(:app) do
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, "paperclip:refresh:missing_styles"
-        end
-      end
-    end
-  end
 
-desc "Create nondigest versions of all ckeditor digest assets"
-task "assets:precompile" do
-  fingerprint = /\-[0-9a-f]{32}\./
-  for file in Dir["public/assets/ckeditor/**/*"]
-    next unless file =~ fingerprint
-    nondigest = file.sub fingerprint, '.'
-    FileUtils.cp file, nondigest, verbose: true
-  end
-end
-
-  
 
   after :finishing, 'deploy:cleanup'
-  
-after("deploy:compile_assets", "deploy:build_missing_paperclip_styles")
+
 
 end
 
