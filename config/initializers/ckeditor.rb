@@ -9,7 +9,7 @@ Ckeditor.setup do |config|
   config.assets_languages = ['en', 'fr']
   config.assets_plugins = ['image', 'smiley']
 
-
+  Rails.application.config.assets.precompile += %w( ckeditor/* )
   # Allowed image file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(jpg jpeg png gif tiff)
