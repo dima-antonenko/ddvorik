@@ -80,6 +80,18 @@ namespace :deploy do
       execute "cd #{fetch(:deploy_to)}/current; #{fetch(:rake)} db:seed RAILS_ENV=#{fetch(:rails_env)}"
     end
   end
+
+  require 'fileutils'
+
+  desc "Create nondigest versions of all ckeditor digest assets"
+  task "assets:precompile" do
+    fingerprint = /\-[0-9a-f]{32}\./
+    for file in Dir["public/assets/ckeditor/**/*"]
+      next unless file =~ fingerprint
+      nondigest = file.sub fingerprint, '.'
+      FileUtils.cp file, nondigest, verbose: true
+    end
+  end
  
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
