@@ -19,7 +19,9 @@ set :rake,             -> { "#{fetch(:bundle_cmd)} exec rake" }
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
  
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}" 
+
+set :linked_dirs, %w{app/views/instances/custom public/assets/ckeditor}
  
 # Default value for :scm is :git
 # set :scm, :git
