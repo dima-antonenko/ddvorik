@@ -2958,6 +2958,8 @@ a.color:hover {
 .banner div img {
 	margin-left:10px;
 	margin-bottom: 7px;
+	width: 225px !important; 
+	height: 161px !important;
 }
 
 .box-product .name .category_name {
