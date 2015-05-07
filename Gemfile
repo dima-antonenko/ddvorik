@@ -71,4 +71,4 @@ group :production do
   gem 'unicorn'
 end
 
-gem 'ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
