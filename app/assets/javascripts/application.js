@@ -16,10 +16,3 @@
 
 //= require ckeditor/init
 //= require_tree .
-
-//= require jquery.js
-//= require jquery.ui.effect-blind
-//= require jquery_ujs
-//= require jquery.Jcrop.min
-//= require bootstrap
-//= require ckeditor/custom_config
