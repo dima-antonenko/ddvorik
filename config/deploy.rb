@@ -115,8 +115,7 @@ end
 
   after :finishing, 'deploy:cleanup'
   
-
+after("deploy:compile_assets", "deploy:build_missing_paperclip_styles")
 
 end
 
-after("deploy:compile_assets", "deploy:build_missing_paperclip_styles")
