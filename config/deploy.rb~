@@ -105,6 +105,7 @@ namespace :deploy do
 
 
   after :finishing, 'deploy:cleanup'
+  after "deploy:restart", "deploy:cleanup"
 
 
 end
