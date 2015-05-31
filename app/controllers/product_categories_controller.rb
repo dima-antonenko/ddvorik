@@ -4,7 +4,6 @@ class ProductCategoriesController < ApplicationController
   # GET /product_categories
   # GET /product_categories.json
   def index
-    layout false
     @product_categories = ProductCategory.all
     @product_category_menu = Menu.where(place: "catalog_menu").first
   end
